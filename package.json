@@ -1,0 +1,43 @@
+{
+  "type": "module",
+  "name": "semver-bump-action",
+  "version": "1.0.0",
+  "description": "Automatic semantic version bumping based on pull requests labels",
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "codegen": "graphql-codegen --config graphql-codegen.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t15i/semver-bump-action.git"
+  },
+  "author": {
+    "name": "Aleksandr Boiarnikov",
+    "email": "dev@gmvr.pw",
+    "url": "https://gvmr.pw"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t15i/semver-bump-action/issues"
+  },
+  "homepage": "https://github.com/t15i/semver-bump-action",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@graphql-codegen/cli": "5.0.5",
+    "@graphql-codegen/typescript": "4.1.6",
+    "@graphql-codegen/typescript-document-nodes": "4.0.16",
+    "@graphql-codegen/typescript-operations": "^4.6.0",
+    "@graphql-codegen/typescript-resolvers": "4.5.0",
+    "@octokit/graphql-schema": "^15.26.0",
+    "esbuild": "^0.25.2",
+    "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.30.1"
+  }
+}

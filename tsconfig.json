@@ -1,0 +1,17 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "strict": true,
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "@/controller/*": ["./src/controller/*"],
+      "@/domain/*": ["./src/domain/*"],
+      "@/repository/*": ["./src/repository/*"]
+    }
+  }
+}

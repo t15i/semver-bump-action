@@ -1,0 +1,30 @@
+query GetLabelsByComparison($owner: String!, $repo: String!, $baseRef: String!, $headRef: String!, $cursor: String) {
+  repository(owner: $owner, name: $repo) {
+    ref(qualifiedName: $baseRef) {
+      compare(headRef: $headRef) {
+        commits(first: 100, after: $cursor) {
+          nodes {
+            abbreviatedOid
+            associatedPullRequests(first: 10) {
+              nodes {
+                number
+                mergeCommit {
+                  abbreviatedOid
+                }
+                labels(first: 100) {
+                  nodes {
+                    name
+                  }
+                }
+              }
+            }
+          }
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+        }
+      }
+    }
+  }
+}

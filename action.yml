@@ -1,0 +1,26 @@
+name: 'Semantic Version Bumper'
+author: 'Aleksandr Boiarnikov'
+description: 'Automatic semantic version bumping based on pull request labels'
+inputs:
+  basehead:
+    description: 'Base and head refs of comparison'
+    required: true
+  labels:
+    description: 'Labels that determine MAJOR, MINOR and PATCH changes'
+    default: 'major.minor.patch'
+  version:
+    description: 'Version that will be bumped based on the detected labels'
+    default: '0.0.0'
+  token:
+    description: 'Token to be used'
+    default: ${{ github.token }}
+outputs:
+  bumped_version:
+    description: 'Bumped version'
+runs:
+  using: 'node20'
+  main: 'dist/index.cjs'
+branding:
+  icon: 'tag'
+  color: 'purple'
+
