@@ -1,7 +1,7 @@
 # Semantic Version Bumper V1
 This pretty simple action automatically bump the version number according to [Semantic Versioning](https://semver.org) based on the labels of pull requests merged between two specified Git refs (specially tags).
 ## What's new
-Please refer to the [release page](https://github.com/t15i/semver-bumper-action/releases) for the latest release notes.
+Please refer to the [release page](https://github.com/t15i/semver-bump-action/releases) for the latest release notes.
 ## Usage
 ```yaml
 - uses: t15i/semver-bump-action@v1.0.0
