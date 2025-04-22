@@ -1,4 +1,4 @@
-name: 'Semantic Version Bumper'
+name: 'SemVer Bumper'
 author: 'Aleksandr Boiarnikov'
 description: 'Automatic semantic version bumping based on pull request labels'
 inputs:
